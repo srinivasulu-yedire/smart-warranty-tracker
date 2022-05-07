@@ -27,6 +27,7 @@ public class DashBoardProductsHandler {
     }
     
     public List<ProductBO> retrieveProductsList() {
+        System.out.println("Inside retrieve products list");
 		return productsWarrantyService.retrieveProductsList();
 	}
 
