@@ -6,32 +6,36 @@ import main.java.org.bits.businessobject.ProductBO;
 import main.java.org.bits.dao.ProductsWarrantyDAO;
 
 public class ProductsWarrantyServiceImpl implements ProductsWarrantyService {
-	
-	private ProductsWarrantyDAO productsWarrantyDAO;
-	
-	
-	public ProductsWarrantyDAO getProductsWarrantyDAO() {
-		return productsWarrantyDAO;
-	}
 
-	public void setProductsWarrantyDAO(ProductsWarrantyDAO productsWarrantyDAO) {
-		this.productsWarrantyDAO = productsWarrantyDAO;
-	}
+    private ProductsWarrantyDAO productsWarrantyDAO;
 
-	@Override
-	public List<ProductBO> retrieveProductsList() {
-		return productsWarrantyDAO.retrieveProductsList();
-	}
+    public ProductsWarrantyDAO getProductsWarrantyDAO() {
+        return productsWarrantyDAO;
+    }
 
-	@Override
-	public void saveProductInfo(ProductBO productBO) {
-		productsWarrantyDAO.saveProductInfo(productBO);
-	}
+    public void setProductsWarrantyDAO(ProductsWarrantyDAO productsWarrantyDAO) {
+        this.productsWarrantyDAO = productsWarrantyDAO;
+    }
 
-	@Override
-	public void uploadProductReceipt(ProductBO productBO) {
-		productsWarrantyDAO.uploadProductReceipt(productBO);
-	}
-	
-	
+    @Override
+    public List<ProductBO> retrieveProductsList() {
+        return productsWarrantyDAO.retrieveProductsList();
+    }
+
+    @Override
+    public void saveProductInfo(ProductBO productBO) {
+        productsWarrantyDAO.saveProductInfo(productBO);
+    }
+
+    @Override
+    public void uploadProductReceipt(ProductBO productBO) {
+        productsWarrantyDAO.uploadProductReceipt(productBO);
+    }
+
+    @Override
+    public void generateInventoryCount() {
+        System.out.println("Inventory count is 10");
+
+    }
+
 }
