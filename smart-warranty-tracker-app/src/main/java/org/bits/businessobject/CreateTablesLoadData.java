@@ -19,17 +19,17 @@ public class CreateTablesLoadData {
 
     static AmazonDynamoDB client = AmazonDynamoDBClientBuilder.standard().build();
     static DynamoDB dynamoDB = new DynamoDB(client);
-    static SimpleDateFormat dateFormatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
+    //static SimpleDateFormat dateFormatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
     static String productCatalogTableName = "Products";
 
     public static void main(String[] args) throws Exception {
         try {
             logger.info("Start- loadSample Products creation");
+            //Load Data for Sample Products
             loadSampleProducts(productCatalogTableName);
             logger.info("End- loadSample Products creation");
         } catch (Exception e) {
-            System.err.println("Program failed:");
-            System.err.println(e.getMessage());
+            System.err.println("Program failed:" + e.getMessage());
             logger.warn("LoadSample Products Failed" + e.getMessage());
         }
         System.out.println("Success.");
@@ -60,9 +60,8 @@ public class CreateTablesLoadData {
             table.putItem(item);
             logger.info("End- Adding data to " + tableName);
         } catch (Exception e) {
-            System.err.println("Failed to create item in " + tableName);
-            System.err.println(e.getMessage());
-            logger.warn("Failed to create item in " + tableName + ", " +e.getMessage());
+            System.err.println("Failed to create item in " + tableName + e.getMessage());
+            logger.warn("Failed to create item in " + tableName + ", " + e.getMessage());
         }
     }
 }
