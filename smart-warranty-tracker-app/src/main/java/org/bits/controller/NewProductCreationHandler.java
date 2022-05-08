@@ -12,7 +12,6 @@ public class NewProductCreationHandler {
 	private static final Logger logger = LoggerFactory.getLogger(NewProductCreationHandler.class);
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
 	}
 	

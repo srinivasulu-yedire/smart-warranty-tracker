@@ -10,9 +10,7 @@ import org.slf4j.LoggerFactory;
 public class DashBoardProductsHandler {
 
     private static final Logger logger = LoggerFactory.getLogger(DashBoardProductsHandler.class);
-
     private ProductsWarrantyService productsWarrantyService;
-
     public ProductsWarrantyService getProductsWarrantyService() {
         return productsWarrantyService;
     }
