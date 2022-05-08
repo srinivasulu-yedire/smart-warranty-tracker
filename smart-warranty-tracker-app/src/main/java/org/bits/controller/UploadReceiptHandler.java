@@ -10,7 +10,6 @@ public class UploadReceiptHandler {
 	private static final Logger logger = LoggerFactory.getLogger(UploadReceiptHandler.class);
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 	}
 	
 	private ProductsWarrantyService productsWarrantyService;
